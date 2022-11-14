@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!--just trying out inital idea for design -->
+  <body>
+    <audio id="myAudio1">
+      <source
+        src="/y2mate.com - Con La Brisa From Black Panther Wakanda Forever  Music From and Inspired ByVisual.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    <audio id="myAudio2">
+      <source
+        src="/y2mate.com - Lil Yachty  Poland Directed by Cole Bennett.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    <audio id="myAudio3">
+      <source
+        src="/y2mate.com - Emotional Oranges  West Coast Love Audio.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+
+    <audio id="myAudio4">
+      <source
+        src="/y2mate.com - DAPPER DAN.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+
+    <audio id="myAudio5">
+      <source
+        src="/y2mate.com - ZZ  ICY feat Thorii.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    
+    <audio id="myAudio6">
+      <source
+        src="/y2mate.com - STRFKR  Never Ever OFFICIAL MUSIC VIDEO.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+
+    <div class="section-one" id="s1">
+      <div  class = "d-arrow1" onclick="smoothScroll1()">↓</div>
+      <div class="text">NOW PLAYING</div>
+      <div class="song">Con La Brisa</div>
+      <div class="artist">Foudeqush, Ludwig Göransson</div>
+      <div onclick="playAudio()" class="play" id="con">▷</div>
+    </div>
+
+    <div class="section-two" id="s2">
+      <div  class = "d-arrow1" onclick="smoothScroll2()">↓</div>
+      <div class="text2">NOW PLAYING</div>
+      <div class="song2">Poland</div>
+      <div class="artist2">Lil Yachty</div>
+      <!-- <button onclick="playAudio()" class="button-4" type="button" id="con">Play</button> -->
+      <div onclick="playAudio2()" class="play2" id="con2">▷</div>
+    </div>
+
+    <div class="section-three" id="s3">
+      <div  class = "d-arrow1" onclick="smoothScroll3()">↓</div>
+      <div class="text3">NOW PLAYING</div>
+      <div class="song3">West Coast Love</div>
+      <div class="artist3">Emotional Oranges</div>
+      <!-- <button onclick="playAudio()" class="button-4" type="button" id="con">Play</button> -->
+      <div onclick="playAudio3()" class="play3" id="con3">▷</div>
+    </div>
+
+    <div class="section-four" id="s4">
+      <div  class = "d-arrow1" onclick="smoothScroll4()">↓</div>
+      <div class="text4">NOW PLAYING (BY ARSH)</div>
+      <div class="song4">DAPPER DAN</div>
+      <div class="artist4">Ski Mask The Slump God</div>
+      <div onclick="playAudio4()" class="play4" id="con4">▷</div>
+    </div>
+
+
+    <div class="section-five" id="s5">
+      <div  class = "d-arrow1" onclick="smoothScroll5()">↓</div>
+      <div class="text5">NOW PLAYING (BY ARHAAN)</div>
+      <div class="song5">ICY (feat. Thorii)</div>
+      <div class="artist5">ZZ</div>
+      <div onclick="playAudio5()" class="play5" id="con5">▷</div>
+    </div>
+
+
+    <div class="section-six" id="s6">
+    <div  class = "d-arrow1" onclick="smoothScroll6()">↑</div>
+      <div class="text6">NOW PLAYING (BY TRISHA)</div>
+      <div class="song6">Never Ever</div>
+      <div class="artist6">STRFKR</div>
+      <div onclick="playAudio6()" class="play6" id="con6">▷</div>
+    </div>
+
+  </body>
+
+  <script>
+    
+
+    function smoothScroll1(){
+      var elmntToView = document.getElementById("s2");
+      elmntToView.scrollIntoView({behavior: "smooth", block: "start"});
+    }
+
+    function smoothScroll2(){
+      var elmntToView2 = document.getElementById("s3");
+      elmntToView2.scrollIntoView({behavior: "smooth", block: "start"});
+    }
+
+    function smoothScroll3(){
+      var elmntToView3 = document.getElementById("s4");
+      elmntToView3.scrollIntoView({behavior: "smooth", block: "start"});
+    }
+
+    function smoothScroll4(){
+      var elmntToView4 = document.getElementById("s5");
+      elmntToView4.scrollIntoView({behavior: "smooth", block: "start"});
+    }
+
+    function smoothScroll5(){
+      var elmntToView5 = document.getElementById("s6");
+      elmntToView5.scrollIntoView({behavior: "smooth", block: "start"});
+    }
+
+    function smoothScroll6(){
+      var elmntToView6 = document.getElementById("s1");
+      elmntToView6.scrollIntoView({behavior: "smooth", block: "start"});
+    }
+
+    var shared = 0;
+    var x = document.getElementById("myAudio1");
+    let btnsend = document.getElementById("con");
+    var flag = 1;
+
+    function playAudio() {
+      if (flag == 1 && shared == 0) {
+        flag = 0;
+        shared = 1;
+        btnsend.innerHTML = "□";
+        btnsend.style.cssText = "font-size:78vw; margin-top: -82.5%;";
+        x.play();
+      } else if (flag == 0) {
+        flag = 1;
+        shared = 0;
+        btnsend.innerHTML = "▷";
+        btnsend.style.cssText = "font-size:44.2vw; margin-top: -52.5%;";
+        x.pause();
+      }
+    }
+
+    var x2 = document.getElementById("myAudio2");
+    let btnsend2 = document.getElementById("con2");
+    var flag2 = 1;
+
+    function playAudio2() {
+      if (flag2 == 1 && shared == 0) {
+        flag2 = 0;
+        shared = 1;
+        btnsend2.innerHTML = "□";
+        btnsend2.style.cssText = "font-size:78vw; margin-top: -82.5%;";
+        x2.play();
+      } else if (flag2 == 0) {
+        flag2 = 1;
+        shared = 0;
+        btnsend2.innerHTML = "▷";
+        btnsend2.style.cssText = "font-size:44.2vw; margin-top: -52.5%;";
+        x2.pause();
+      }
+    }
+
+    var x3 = document.getElementById("myAudio3");
+    let btnsend3 = document.getElementById("con3");
+    var flag3 = 1;
+
+    function playAudio3() {
+      if (flag3 == 1 && shared == 0) {
+        flag3 = 0;
+        shared = 1;
+        btnsend3.innerHTML = "□";
+        btnsend3.style.cssText = "font-size:78vw; margin-top: -82.5%;";
+        x3.play();
+      } else if (flag3 == 0) {
+        flag3 = 1;
+        shared = 0;
+        btnsend3.innerHTML = "▷";
+        btnsend3.style.cssText = "font-size:44.2vw; margin-top: -52.5%;";
+        x3.pause();
+      }
+    }
+
+    var x4 = document.getElementById("myAudio4");
+    let btnsend4 = document.getElementById("con4");
+    var flag4 = 1;
+
+    function playAudio4() {
+      if (flag4 == 1 && shared == 0) {
+        flag4 = 0;
+        shared = 1;
+        btnsend4.innerHTML = "□";
+        btnsend4.style.cssText = "font-size:78vw; margin-top: -82.5%;";
+        x4.play();
+      } else if (flag4 == 0) {
+        flag4 = 1;
+        shared = 0;
+        btnsend4.innerHTML = "▷";
+        btnsend4.style.cssText = "font-size:44.2vw; margin-top: -52.5%;";
+        x4.pause();
+      }
+    }
+
+    var x5 = document.getElementById("myAudio5");
+    let btnsend5 = document.getElementById("con5");
+    var flag5 = 1;
+
+    function playAudio5() {
+      if (flag5 == 1 && shared == 0) {
+        flag5 = 0;
+        shared = 1;
+        btnsend5.innerHTML = "□";
+        btnsend5.style.cssText = "font-size:78vw; margin-top: -82.5%;";
+        x5.play();
+      } else if (flag5 == 0) {
+        flag5 = 1;
+        shared = 0;
+        btnsend5.innerHTML = "▷";
+        btnsend5.style.cssText = "font-size:44.2vw; margin-top: -52.5%;";
+        x5.pause();
+      }
+    }
+
+    var x6 = document.getElementById("myAudio6");
+    let btnsend6 = document.getElementById("con6");
+    var flag6 = 1;
+
+    function playAudio6() {
+      if (flag6 == 1 && shared == 0) {
+        flag6 = 0;
+        shared = 1;
+        btnsend6.innerHTML = "□";
+        btnsend6.style.cssText = "font-size:78vw; margin-top: -82.5%;";
+        x6.play();
+      } else if (flag6 == 0) {
+        flag6 = 1;
+        shared = 0;
+        btnsend6.innerHTML = "▷";
+        btnsend6.style.cssText = "font-size:44.2vw; margin-top: -52.5%;";
+        x6.pause();
+      }
+    }
+
+
+  </script>
+</html>
