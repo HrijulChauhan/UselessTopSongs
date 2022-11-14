@@ -13,4 +13,5 @@ Site looks DOGSHIT on mobile. Designed with only web in mind.
 <br>
 To do : <br>
 1) Maybe add some form of background animation for each of the songs? <br>
-2) Import the `information` page from `The.Archive`.
+2) Import the information page from The.Archive.
+  `sfdsf`
